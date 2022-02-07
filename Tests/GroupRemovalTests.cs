@@ -12,7 +12,7 @@ namespace AddressbookTestsAutoit
     [TestFixture]
     public class GroupRemovalTests : TestBase
     {
-        [TestMethod]
+        [Test]
 
         public void _TestGroupRemoval()
         {
