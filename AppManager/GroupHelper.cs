@@ -47,7 +47,7 @@ namespace AddressbookTestsAutoit
         public void Remove()
         {
             OpenGroupsDialog();
-            aux.ControlClick(GROUPWINTITLE, "", "WindowsForms10.BUTTON.app.0.62e4493");
+            //aux.ControlClick(GROUPWINTITLE, "", "WindowsForms10.BUTTON.app.0.62e4493");
             SelectGroup();
             ClickDeleteGroup();
             DeletingCompletely();
@@ -56,16 +56,20 @@ namespace AddressbookTestsAutoit
 
         private void SelectGroup()
         {
-            aux.ControlClick(WINTITLE, "", "WindowsForms10.SysTreeView32.app.0.2c908d51"); 
+            aux.ControlTreeView(
+                GROUPWINTITLE, "", "WindowsForms10.SysTreeView32.app.0.2c908d51",
+                "Select", "General", "");
+            
         }
-                private void ClickDeleteGroup()
+
+        private void ClickDeleteGroup()
         {
-            aux.ControlClick(WINTITLE, "", "WindowsForms10.BUTTON.app.0.2c908d5"); ;
+            aux.ControlClick(GROUPWINTITLE, "", "WindowsForms10.BUTTON.app.0.2c908d51"); ;
         }
 
         private void DeletingCompletely()
         {
-            aux.ControlClick(WINTITLE, "", "WindowsForms10.BUTTON.app.0.2c908d53");
+            aux.ControlClick("Delete group", "", "WindowsForms10.BUTTON.app.0.2c908d53");
         }
         
 
@@ -74,7 +78,7 @@ namespace AddressbookTestsAutoit
 
         private void CloseGroupsDialog()
         {
-            aux.ControlClick(WINTITLE, "", "WindowsForms10.BUTTON.app.0.62e4494");
+            aux.ControlClick("Group editor", "", "WindowsForms10.BUTTON.app.0.2c908d54");
         }
 
         private void OpenGroupsDialog()
