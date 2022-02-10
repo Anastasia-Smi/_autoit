@@ -58,7 +58,7 @@ namespace AddressbookTestsAutoit
         {
             aux.ControlTreeView(
                 GROUPWINTITLE, "", "WindowsForms10.SysTreeView32.app.0.2c908d51",
-                "Select", "General", "");
+                "Select", $"#0|#0", "");
             
         }
 
